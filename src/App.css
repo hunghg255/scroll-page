@@ -1,10 +1,46 @@
+/* custom sidebar */
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+  html{
+    scrollbar-width: none;
+  }
+}
+body {
+  margin: 0; /* remove default margin */
+  scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+  -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+  overflow-y: scroll;
+  cursor: pointer;
+}
+body::-webkit-scrollbar {
+  scrollbar-width: none;
+  width: 0px;
+  background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+}
+
 .App {
-  text-align: center;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:nth-child(2n) {
+  background-color: gray;
+}
+
+.box:nth-child(2n + 1) {
+  background-color: dodgerblue;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,25 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./App.css";
+import ScrollPage from "./components/ScrollPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ScrollPage isHorizontalScroll={true} speed={0.06}>
+      <div className="box">DIV 1</div>
+      <div className="box">DIV 2</div>
+      <div className="box">DIV 3</div>
+      <div className="box">DIV 4</div>
+    </ScrollPage>
   );
 }
 
